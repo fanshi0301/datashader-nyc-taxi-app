@@ -5,7 +5,7 @@
 
 Click the badge above to serve the `app.ipynb` app on Binder, visualizing NYC taxi trip data.
 
-This dashboard is adapted from the [example dashboard](http://datashader.org/dashboard.html) on the Datashader documentation. It is meant to serve as an example of a Panel dashboard that combines several different visualization libraries.
+This dashboard is adapted from the [example dashboard](https://examples.pyviz.org/datashader_dashboard/dashboard.html) on the Datashader documentation. It is meant to serve as an example of a Panel dashboard that combines several different visualization libraries.
 
 The dashboard includes:
 
@@ -16,19 +16,8 @@ The dashboard includes:
 
 As the user zooms in/out of the map, the Altair chart updates to show only data currently within the map viewport.
 
-### Note
-
-If you receive a "Request Timeout" or "Connection Refused" error when loading the app, try waiting a few minutes and re-clicking on the app launch button above.
-
-### Repository Files
-
-- `environment.yml` installing bokeh and nbserverproxy
-- a custom serverextension (`panelserverextension.py`) that launches bokeh server
-- a `postBuild` script that runs on Binder after the environment is installed that enables the server extensions and downloads the NYC taxi data set
-- A [Panel](https://github.com/pyviz/panel)-based notebook (`app.ipynb`) that displaying NYC Taxi trips using datashader
-
 #### Note
 
-The last step in `postBuild` downloads the NYC taxi dataset (https://s3.amazonaws.com/datashader-data/nyc_taxi_wide.parq). This step is specific only to this app and does not need to be included if you are working with a different dataset.
+The `postBuild` file downloads the NYC taxi dataset (https://s3.amazonaws.com/datashader-data/nyc_taxi_wide.parq). This step is specific only to this app and does not need to be included if you are working with a different dataset.
 
 ![dashboard screenshot](./assets/dashboard_screenshot.png)
